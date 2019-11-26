@@ -1,0 +1,17 @@
+{
+  "name": "brpoc",
+  "version": "1.0.0",
+  "description": "Bridget Riley Proof of Concept",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass -rw scss -o css",
+    "watch": "npm run scss-compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "scss-compile": "^0.1.7"
+  }
+}
