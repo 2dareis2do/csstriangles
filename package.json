@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "npm run scss-compile",
-    "scss-compile": "sass scss css",
-    "watch": "npm run scss-compile"
+    "scss-compile": "sass scss/style.scss css/style.css"
   },
   "author": "",
   "license": "ISC",

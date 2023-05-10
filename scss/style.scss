@@ -1,14 +1,17 @@
-$size: 75;
+$regular: 75;
+$large: 100;
+
 body {
   // padding: 50px 30px;
   margin: 0;
+  background-color: lightgrey;
 }
 
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 #{$size * -1}px;
+  margin: 0 #{$regular * -1}px;
   >* {
     margin: 0 0px;
   }
@@ -27,20 +30,17 @@ body {
   padding-bottom: 30px;
 }
 
-.title {
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  font-weight: 400;
-  margin: 0;
-}
-
 .triangle {
-  width: #{calc($size / 1.75)}px;
-  height: #{$size }px;
+  width: #{calc($regular / 1.75)}px;
+  height: #{$regular }px;
   position: relative;
   overflow: hidden;
+  background: #FFF;
+  &__large {
+    // @extend .triangle;
+    width: #{calc($large / 1.75)}px;
+    height: #{$large }px;
+  }
   &::before {
     content: '';
     display: block;
@@ -64,9 +64,9 @@ body {
 }
 
 .triangle--convex {
-  // width: #{$size}px;
-  width: #{calc($size / 1.75)}px;
-  height: #{$size}px;
+  // width: #{$regular}px;
+  width: #{calc($regular / 1.75)}px;
+  height: #{$regular}px;
   position: relative;
   overflow: hidden;
   &::before {
@@ -97,9 +97,9 @@ body {
 }
 
 .triangle--concave {
-  // width: #{$size}px;
-  width: #{calc($size / 1.75)}px;
-  height: #{$size}px;
+  // width: #{$regular}px;
+  width: #{calc($regular / 1.75)}px;
+  height: #{$regular}px;
   position: relative;
   overflow: hidden;
   &::before {
@@ -132,15 +132,15 @@ body {
 }
 
 .triangle--right {
-  width: #{calc($size / 1.75)}px;
-  height: #{$size}px;
+  width: #{calc($regular / 1.75)}px;
+  height: #{$regular}px;
   position: relative;
   overflow: hidden;
   &::before {
     content: '';
     display: block;
-    width: #{$size * 2}px;
-    height: #{$size * 2}px;
+    width: #{$regular * 2}px;
+    height: #{$regular * 2}px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -151,6 +151,16 @@ body {
     // transform:    rotate(45deg) scale(1, -1) translateX(6%) translateY(-36%);
     transform: rotate(60deg) scale(1, -1) translateX(6%) translateY(-25%);
   }
+  &__large {
+   // @extend .triangle--right;
+   width: #{calc($large / 1.75)}px;
+   height: #{$large}px;
+
+   &::before {
+     width: #{$large * 2}px;
+     height: #{$large * 2}px;
+   }
+  }
   &.invert {
     &::before {
       background: black;
@@ -160,22 +170,22 @@ body {
 }
 
 .triangle--space {
-  width: #{calc($size / 1.75)}px;
-  height: #{$size}px;
+  width: #{calc($regular / 1.75)}px;
+  height: #{$regular}px;
   position: relative;
   overflow: hidden;
 }
 
 .arrow-right {
-  width: #{$size}px;
-  height: #{$size}px;
+  width: #{$regular}px;
+  height: #{$regular}px;
   position: relative;
   overflow: hidden;
   &::before {
     content: '';
     display: block;
-    width: #{calc($size / 1.41)}px;
-    height: #{calc($size / 1.41)}px;
+    width: #{calc($regular / 1.41)}px;
+    height: #{calc($regular / 1.41)}px;
     position: absolute;
     top: 0;
     left: 0;
@@ -186,15 +196,15 @@ body {
 }
 
 .arrow-left {
-  width: #{$size}px;
-  height: #{$size}px;
+  width: #{$regular}px;
+  height: #{$regular}px;
   position: relative;
   overflow: hidden;
   &::before {
     content: '';
     display: block;
-    width: #{calc($size / 1.41)}px;
-    height: #{calc($size / 1.41)}px;
+    width: #{calc($regular / 1.41)}px;
+    height: #{calc($regular / 1.41)}px;
     position: absolute;
     top: 0;
     right: 0;
@@ -215,8 +225,13 @@ body {
   }
 }
 
+.outer--container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
 .container {
-  width: #{calc($size / 1.75) * 12}px;
+  width: #{calc($regular / 1.75) * 12}px;
   margin: 0 auto;
   overflow: hidden;
 }

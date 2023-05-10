@@ -4,6 +4,6 @@ CSS Triangle variations in a grid inspired by Bridget Riley
 ## Install Dependencies
 npm install
 
-## Watch and Compile SCSS
+## Compile SCSS
 npm run scss-compile
 

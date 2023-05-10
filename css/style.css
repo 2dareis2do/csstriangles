@@ -1,173 +1,212 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: lightgrey;
+}
 
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 -75px; }
-  .row > * {
-    margin: 0 0px; }
+  margin: 0 -75px;
+}
+.row > * {
+  margin: 0 0px;
+}
 
 .row--even {
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .row--even > * {
-    margin: 0 0px; }
+  justify-content: center;
+}
+.row--even > * {
+  margin: 0 0px;
+}
 
 .space {
-  padding-bottom: 30px; }
-
-.title {
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  font-weight: 400;
-  margin: 0; }
+  padding-bottom: 30px;
+}
 
 .triangle {
-  width: 42.85714px;
+  width: 42.8571428571px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
-  .triangle::before {
-    content: '';
-    display: block;
-    width: 300%;
-    height: 150%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: black;
-    transform: rotate(30deg) scale(1) translateX(0px);
-    transform-origin: 0 100%;
-    box-shadow: 0 0 0 100% white; }
-  .triangle.invert::before, .triangle.arrow-invert::before {
-    background: white;
-    box-shadow: 0 0 0 500px black; }
+  overflow: hidden;
+  background: #FFF;
+}
+.triangle__large {
+  width: 57.1428571429px;
+  height: 100px;
+}
+.triangle::before {
+  content: "";
+  display: block;
+  width: 300%;
+  height: 150%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
+  transform: rotate(30deg) scale(1) translateX(0px);
+  transform-origin: 0 100%;
+  box-shadow: 0 0 0 100% white;
+}
+.triangle.invert::before, .triangle.arrow-invert::before {
+  background: white;
+  box-shadow: 0 0 0 500px black;
+}
 
 .triangle--convex {
-  width: 42.85714px;
+  width: 42.8571428571px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
-  .triangle--convex::before {
-    content: '';
-    display: block;
-    width: 600%;
-    height: 300%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: black;
-    border-top-left-radius: 100% 100%;
-    border-bottom-left-radius: 100% 100%;
-    border-bottom-right-radius: 10% 100%;
-    border-top-right-radius: 10% 100%;
-    transform: rotate(30deg) scale(1) translateX(-4%) translateY(30%);
-    transform-origin: 0 100%;
-    box-shadow: 0 0 0 500px white; }
-  .triangle--convex.invert::before {
-    background: white;
-    box-shadow: 0 0 0 500px black; }
+  overflow: hidden;
+}
+.triangle--convex::before {
+  content: "";
+  display: block;
+  width: 600%;
+  height: 300%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
+  border-top-left-radius: 100% 100%;
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 10% 100%;
+  border-top-right-radius: 10% 100%;
+  transform: rotate(30deg) scale(1) translateX(-4%) translateY(30%);
+  transform-origin: 0 100%;
+  box-shadow: 0 0 0 500px white;
+}
+.triangle--convex.invert::before {
+  background: white;
+  box-shadow: 0 0 0 500px black;
+}
 
 .triangle--concave {
-  width: 42.85714px;
+  width: 42.8571428571px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
-  .triangle--concave::before {
-    content: '';
-    display: block;
-    width: 600%;
-    height: 300%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform-origin: 0 100%;
-    border-top-left-radius: 50% 100%;
-    border-bottom-left-radius: 50% 100%;
-    border-bottom-right-radius: 100% 100%;
-    border-top-right-radius: 100% 100%;
-    background: white;
-    box-shadow: 0 0 0 500px black;
-    transform: rotate(45deg) scale(1) translateX(0px) translateY(42%) translateX(-100%); }
-  .triangle--concave.invert::before, .triangle--concave.arrow-invert::before {
-    background: black;
-    box-shadow: 0 0 0 500px white; }
+  overflow: hidden;
+}
+.triangle--concave::before {
+  content: "";
+  display: block;
+  width: 600%;
+  height: 300%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 100%;
+  border-top-left-radius: 50% 100%;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  background: white;
+  box-shadow: 0 0 0 500px black;
+  transform: rotate(45deg) scale(1) translateX(0px) translateY(42%) translateX(-100%);
+}
+.triangle--concave.invert::before, .triangle--concave.arrow-invert::before {
+  background: black;
+  box-shadow: 0 0 0 500px white;
+}
 
 .triangle--right {
-  width: 42.85714px;
+  width: 42.8571428571px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
-  .triangle--right::before {
-    content: '';
-    display: block;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform-origin: 0 0;
-    background: white;
-    box-shadow: 0 0 0 500px black;
-    transform: rotate(60deg) scale(1, -1) translateX(6%) translateY(-25%); }
-  .triangle--right.invert::before {
-    background: black;
-    box-shadow: 0 0 0 500px white; }
+  overflow: hidden;
+}
+.triangle--right::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 0;
+  background: white;
+  box-shadow: 0 0 0 500px black;
+  transform: rotate(60deg) scale(1, -1) translateX(6%) translateY(-25%);
+}
+.triangle--right__large {
+  width: 57.1428571429px;
+  height: 100px;
+}
+.triangle--right__large::before {
+  width: 200px;
+  height: 200px;
+}
+.triangle--right.invert::before {
+  background: black;
+  box-shadow: 0 0 0 500px white;
+}
 
 .triangle--space {
-  width: 42.85714px;
+  width: 42.8571428571px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .arrow-right {
   width: 75px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
-  .arrow-right::before {
-    content: '';
-    display: block;
-    width: 53.19149px;
-    height: 53.19149px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #e888a3;
-    transform: rotate(45deg);
-    transform-origin: 0 0; }
+  overflow: hidden;
+}
+.arrow-right::before {
+  content: "";
+  display: block;
+  width: 53.1914893617px;
+  height: 53.1914893617px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e888a3;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
 
 .arrow-left {
   width: 75px;
   height: 75px;
   position: relative;
-  overflow: hidden; }
-  .arrow-left::before {
-    content: '';
-    display: block;
-    width: 53.19149px;
-    height: 53.19149px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #8de698;
-    transform: rotate(-45deg);
-    transform-origin: 100% 0; }
+  overflow: hidden;
+}
+.arrow-left::before {
+  content: "";
+  display: block;
+  width: 53.1914893617px;
+  height: 53.1914893617px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #8de698;
+  transform: rotate(-45deg);
+  transform-origin: 100% 0;
+}
 
 .arrow-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0 0; }
-  .arrow-wrapper > * {
-    margin: 0 0px; }
+  margin: 30px 0 0;
+}
+.arrow-wrapper > * {
+  margin: 0 0px;
+}
+
+.outer--container {
+  margin: 0 auto;
+  max-width: 90%;
+}
 
 .container {
-  width: 514.28571px;
+  width: 514.2857142857px;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
