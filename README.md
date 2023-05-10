@@ -7,3 +7,6 @@ npm install
 ## Compile SCSS
 npm run scss-compile
 
+## Demo
+https://dev.danlobo.co.uk/csstriangles/demo.html
+
