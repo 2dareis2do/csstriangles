@@ -4,8 +4,7 @@
   "description": "Bridget Riley Proof of Concept",
   "main": "index.html",
   "scripts": {
-    "test": "npm run scss-compile",
-    "scss-compile": "sass scss/style.scss css/style.css"
+    "scss-compile": "sass src/scss/style.scss dist/css/style.css"
   },
   "author": "",
   "license": "ISC",
