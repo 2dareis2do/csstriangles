@@ -5,15 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "npm run scss-compile",
-    "scss-compile": "node-sass -rw scss -o css",
+    "scss-compile": "sass scss css",
     "watch": "npm run scss-compile"
-  },
-  "engines": {
-    "node": "<14.0.0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.13.0"
+    "sass": "^1.62.1"
   }
 }
