@@ -31,7 +31,7 @@ body {
   height: 75px;
   position: relative;
   overflow: hidden;
-  background: #FFF;
+  background: transparent;
 }
 .triangle__large {
   width: 57.1428571429px;
@@ -48,10 +48,10 @@ body {
   background: black;
   transform: rotate(30deg) scale(1) translateX(0px);
   transform-origin: 0 100%;
-  box-shadow: 0 0 0 100% white;
+  box-shadow: 0 0 0 100% transparent;
 }
 .triangle.invert::before, .triangle.arrow-invert::before {
-  background: white;
+  background: transparent;
   box-shadow: 0 0 0 500px black;
 }
 
@@ -76,10 +76,10 @@ body {
   border-top-right-radius: 10% 100%;
   transform: rotate(30deg) scale(1) translateX(-4%) translateY(30%);
   transform-origin: 0 100%;
-  box-shadow: 0 0 0 500px white;
+  box-shadow: 0 0 0 500px transparent;
 }
 .triangle--convex.invert::before {
-  background: white;
+  background: transparent;
   box-shadow: 0 0 0 500px black;
 }
 
@@ -102,13 +102,13 @@ body {
   border-bottom-left-radius: 50% 100%;
   border-bottom-right-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
-  background: white;
+  background: transparent;
   box-shadow: 0 0 0 500px black;
   transform: rotate(45deg) scale(1) translateX(0px) translateY(42%) translateX(-100%);
 }
 .triangle--concave.invert::before, .triangle--concave.arrow-invert::before {
   background: black;
-  box-shadow: 0 0 0 500px white;
+  box-shadow: 0 0 0 500px transparent;
 }
 
 .triangle--right {
@@ -126,7 +126,7 @@ body {
   bottom: 0;
   left: 0;
   transform-origin: 0 0;
-  background: white;
+  background: transparent;
   box-shadow: 0 0 0 500px black;
   transform: rotate(60deg) scale(1, -1) translateX(6%) translateY(-25%);
 }
@@ -140,7 +140,7 @@ body {
 }
 .triangle--right.invert::before {
   background: black;
-  box-shadow: 0 0 0 500px white;
+  box-shadow: 0 0 0 500px transparent;
 }
 
 .triangle--space {
