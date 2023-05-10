@@ -8,6 +8,9 @@
     "scss-compile": "node-sass -rw scss -o css",
     "watch": "npm run scss-compile"
   },
+  "engines": {
+    "node": "<14.0.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
