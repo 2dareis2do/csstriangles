@@ -37,7 +37,7 @@ body {
 }
 
 .triangle {
-  width: #{$size / 1.75}px;
+  width: #{calc($size / 1.75)}px;
   height: #{$size }px;
   position: relative;
   overflow: hidden;
@@ -65,7 +65,7 @@ body {
 
 .triangle--convex {
   // width: #{$size}px;
-  width: #{$size / 1.75}px;
+  width: #{calc($size / 1.75)}px;
   height: #{$size}px;
   position: relative;
   overflow: hidden;
@@ -98,7 +98,7 @@ body {
 
 .triangle--concave {
   // width: #{$size}px;
-  width: #{$size / 1.75}px;
+  width: #{calc($size / 1.75)}px;
   height: #{$size}px;
   position: relative;
   overflow: hidden;
@@ -132,7 +132,7 @@ body {
 }
 
 .triangle--right {
-  width: #{$size / 1.75}px;
+  width: #{calc($size / 1.75)}px;
   height: #{$size}px;
   position: relative;
   overflow: hidden;
@@ -160,7 +160,7 @@ body {
 }
 
 .triangle--space {
-  width: #{$size / 1.75}px;
+  width: #{calc($size / 1.75)}px;
   height: #{$size}px;
   position: relative;
   overflow: hidden;
@@ -174,8 +174,8 @@ body {
   &::before {
     content: '';
     display: block;
-    width: #{$size / 1.41}px;
-    height: #{$size / 1.41}px;
+    width: #{calc($size / 1.41)}px;
+    height: #{calc($size / 1.41)}px;
     position: absolute;
     top: 0;
     left: 0;
@@ -193,8 +193,8 @@ body {
   &::before {
     content: '';
     display: block;
-    width: #{$size / 1.41}px;
-    height: #{$size / 1.41}px;
+    width: #{calc($size / 1.41)}px;
+    height: #{calc($size / 1.41)}px;
     position: absolute;
     top: 0;
     right: 0;
@@ -216,7 +216,7 @@ body {
 }
 
 .container {
-  width: #{($size / 1.75) * 12}px;
+  width: #{calc($size / 1.75) * 12}px;
   margin: 0 auto;
   overflow: hidden;
 }
